@@ -1,0 +1,67 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    padding: 10px 60px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+}
+
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 35%;
+}
+
+.secondNavbar{
+    width: 100vw;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 15%;
+    justify-content: space-between;
+}
+
+.secNavOption{
+    border-left: 1px solid white;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.homenavoption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2{
+    margin: 0px;
+    font-size: 24px;
+}
+
+.logoheader{
+    color: #185ADB;
+}
+
+.logospan{
+    color: #163A5F;
+}
+
+.selected{
+    font-weight: bold;
+    
+}

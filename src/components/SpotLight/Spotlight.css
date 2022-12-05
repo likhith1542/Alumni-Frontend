@@ -1,0 +1,17 @@
+.spotlight{
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+}
+
+.spotlightheading{
+    border: none;
+    padding: 10px 0;
+}
+
+.spotlightdata{
+    padding: 5px 0;
+    margin: 5px;
+    display: flex;
+}

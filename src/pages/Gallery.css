@@ -1,0 +1,31 @@
+.page_gallery {
+  margin-top: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.galleryheading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pageimage {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin: 10px;
+}
+
+.gallerybox {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  width: 80%;
+  margin: 10px 0;
+}

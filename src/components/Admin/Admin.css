@@ -1,0 +1,51 @@
+.admin {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.admin > p {
+  font-weight: bold;
+  font-size: 180px;
+  background: linear-gradient(to bottom, #000 50%, #bde0fe 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admingrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px 15px;
+  grid-template-areas:
+    "ANews AGallery"
+    "AEvents ANotification";
+}
+
+.ANews {
+  grid-area: ANews;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AGallery {
+  grid-area: AGallery;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AEvents {
+  grid-area: AEvents;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ANotification {
+  grid-area: ANotification;
+  display: flex;
+  justify-content: center;
+}

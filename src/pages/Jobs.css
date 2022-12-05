@@ -1,0 +1,38 @@
+.newsdetailcompany{
+    background-color: orange;
+    width: max-content;
+    margin: 10px 10px;
+    margin-left: 0;
+}
+
+.newsdetaillocation{
+    background-color: blueviolet;
+    width: max-content;
+    margin: 10px 10px;
+}
+
+.newsdetailtype{
+    background-color: palevioletred;
+    width: max-content;
+    margin: 10px 10px;
+}
+
+.newsdetailsdiv{
+    display: flex;
+}
+
+.removemargin{
+    margin-left: 0;
+}
+
+button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }

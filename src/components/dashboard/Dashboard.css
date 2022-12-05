@@ -1,0 +1,53 @@
+.dashboardMain{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.pcard{
+    padding: 10px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.pcard > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.pinner{
+    display: flex;
+    flex-direction: column;
+}
+
+.pinnerw{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.pcard > .pinner{
+    margin: 0 10px;
+    width: 100%;
+}
+
+.username{
+    font-weight: bold;
+    padding: 10px;
+}
+
+.usernamespan{
+    font-weight: normal;
+    color: rgba(128, 128, 128, .5);
+}
+
+.sizedbox{
+    height: 20px;
+}

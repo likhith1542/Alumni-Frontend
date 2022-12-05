@@ -1,0 +1,15 @@
+.members{
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+}
+
+.membersheading{
+    border: none;
+    padding: 10px 0;
+}
+
+.memberdata{
+    padding: 5px 0;
+}

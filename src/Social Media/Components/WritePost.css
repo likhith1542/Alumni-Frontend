@@ -1,0 +1,56 @@
+.wpost{
+    width: 600px;
+    min-height: 150px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.postarea{
+    border-bottom:none !important ;
+    outline: none !important;
+    background-color: #f5f5f5 !important;
+    border-radius: 8px !important;
+    padding: 5px !important;
+}
+
+.postarea:focus:not([readonly]) {
+    box-shadow: 0 0px 0 0 #26a69a !important;
+}
+
+.imgbtn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.fileuploaddiv{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    justify-content: space-between;
+}
+
+.wpostdrop{
+    border: none !important;
+    outline: none !important;
+    width: max-content;
+}
+
+.postbutton{
+    background-color: #185adb;
+    color: white;
+    margin: 0 10px;
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    border-radius: 6px;
+}
+
+.imageReader{
+    max-width: 450px;
+    max-height: 600px;
+    object-fit: contain;
+
+}

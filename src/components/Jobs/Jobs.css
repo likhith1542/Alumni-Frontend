@@ -1,0 +1,16 @@
+.jobname{
+    padding: 10px 0;
+}
+
+.jobposted{
+    color: grey;
+    font-size: 12px;
+}
+
+.jobdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  height: 100%;
+  border-bottom: 1px solid gainsboro;
+}

@@ -1,0 +1,17 @@
+.search{
+    margin-top: 90px;
+    width: 100%;
+}
+
+.search-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-data{
+    padding: 10px 75px;
+}
+
+.memberdata{
+    margin: 10px;
+}

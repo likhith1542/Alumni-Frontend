@@ -1,0 +1,7 @@
+.chat{
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: calc(100vh - 120px);
+}

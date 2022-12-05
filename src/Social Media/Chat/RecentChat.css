@@ -1,0 +1,13 @@
+.rchat{
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+}
+
+.messagerecent{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128,.2);
+    display: flex;
+    align-items: center;
+}
