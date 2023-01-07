@@ -14,7 +14,7 @@ function MainCarousel() {
     <Carousel.Item key={1} >
       <img
         className="d-block w-100"
-        src="https://vitapalumni.s3.ap-south-1.amazonaws.com/bg3.jpeg"
+        src="https://res.cloudinary.com/vcorner1/image/upload/v1673081742/alumni/bg2_rtlwid.jpg"
         alt="First slide"
       />
       
@@ -22,7 +22,7 @@ function MainCarousel() {
     <Carousel.Item key={2} >
       <img
         className="d-block w-100"
-        src="https://vitapalumni.s3.ap-south-1.amazonaws.com/bg2.jpg"
+        src="https://res.cloudinary.com/vcorner1/image/upload/v1673081742/alumni/bg1_bv2xvn.jpg"
         alt="Second slide"
       />
 
@@ -31,7 +31,7 @@ function MainCarousel() {
     <Carousel.Item key={3} >
       <img
         className="d-block w-100"
-        src="https://vitapalumni.s3.ap-south-1.amazonaws.com/bg1.jpg"
+        src="https://res.cloudinary.com/vcorner1/image/upload/v1673081742/alumni/bg3_u8ufih.jpg"
         alt="Third slide"
       />
 

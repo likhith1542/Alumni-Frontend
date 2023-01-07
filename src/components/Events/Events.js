@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./Events.css";
-import moment from 'moment';
+import moment from "moment";
 
 function Events() {
   const [events, setEvents] = useState([]);
@@ -33,16 +33,12 @@ function Events() {
         {events.map((event) => (
           <div className="eventdiv">
             <div className="eventdetails">
-              <p className="eventdate">{moment(event.date).format('ll')}</p>
-              <p className="eventmonth">{moment(event.date).format('LT')}</p>
+              <p className="eventdate">{moment(event.date).format("ll")}</p>
+              <p className="eventmonth">{moment(event.date).format("LT")}</p>
             </div>
             <p className="eventname">{event.name}</p>
           </div>
         ))}
-       
-        
-       
-        
       </div>
     </div>
   );

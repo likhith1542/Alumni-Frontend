@@ -43,7 +43,7 @@ function Landing() {
         <div className="Events">
           <img
             className="lpageimg"
-            src="https://vitapalumni.s3.ap-south-1.amazonaws.com/event.png"
+            src="https://res.cloudinary.com/vcorner1/image/upload/v1673081506/alumni/event_flaumj.png"
             alt="1"
           />
           <Events />
@@ -56,7 +56,7 @@ function Landing() {
           <NewsRoom />
           <img
             className="lpageimg"
-            src="https://vitapalumni.s3.ap-south-1.amazonaws.com/news.png"
+            src="https://res.cloudinary.com/vcorner1/image/upload/v1673081506/alumni/news_tl3ctt.png"
             alt="2"
           />
         </div>
@@ -67,7 +67,7 @@ function Landing() {
         <div className="Jobs">
           <img
             className="lpageimg"
-            src="https://vitapalumni.s3.ap-south-1.amazonaws.com/job.png"
+            src="https://res.cloudinary.com/vcorner1/image/upload/v1673081506/alumni/job_mfx4wd.png"
             alt="3"
           />
           <Jobs />

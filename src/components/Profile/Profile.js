@@ -55,6 +55,7 @@ function Profile() {
         setDept(response.data.dept);
         setPrgrm(response.data.prgrm);
         setYear(response.data.year);
+        setDOB(response.data.DOB);
       })
       .catch(function (error) {
         console.log(error);
