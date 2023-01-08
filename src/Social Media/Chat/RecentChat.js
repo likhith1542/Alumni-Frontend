@@ -15,7 +15,7 @@ function RecentChat({ name, setPic, setName, convId, setConvId, newConv }) {
       let cfid =
         post.members[0] === user.id ? post.members[1] : post.members[0];
       promises.push(
-        axios.get(`https://backend-yws9.onrender.com/api/users/getUser/${cfid}`)
+        axios.get(`http://localhost:5000/api/users/getUser/${cfid}`)
       );
     });
 
@@ -40,7 +40,7 @@ function RecentChat({ name, setPic, setName, convId, setConvId, newConv }) {
 
   useEffect(() => {
     axios
-      .get(`https://backend-yws9.onrender.com/api/conversations/${user.id}`)
+      .get(`http://localhost:5000/api/conversations/${user.id}`)
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
 

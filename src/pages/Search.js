@@ -26,7 +26,7 @@ function Search() {
     };
 
     axios
-      .post("https://backend-yws9.onrender.com/api/users/getUsers", fetchData)
+      .post("http://localhost:5000/api/users/getUsers", fetchData)
       .then((result) => {
         setData(result.data.users);
         setTotal(result.data.total);

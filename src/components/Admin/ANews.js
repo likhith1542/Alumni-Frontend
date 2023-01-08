@@ -35,7 +35,7 @@ function ANews() {
     newPost.append("file", photo);
 
     axios
-      .post("https://backend-yws9.onrender.com/api/news/addnews", newPost)
+      .post("http://localhost:5000/api/news/addnews", newPost)
       .then((res) => {
         dispatch({
           type: GET_ERRORS,

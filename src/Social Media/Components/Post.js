@@ -35,9 +35,7 @@ function Post({ postt, name, pic }) {
     const promises = [];
     post.comments.forEach((post) => {
       promises.push(
-        axios.get(
-          `https://backend-yws9.onrender.com/api/users/getUser/${post.id}`
-        )
+        axios.get(`http://localhost:5000/api/users/getUser/${post.id}`)
       );
     });
 
@@ -52,9 +50,7 @@ function Post({ postt, name, pic }) {
   const deletePost = (e) => {
     e.preventDefault();
     axios
-      .delete(
-        `https://backend-yws9.onrender.com/api/posts/deletePost/${post._id}`
-      )
+      .delete(`http://localhost:5000/api/posts/deletePost/${post._id}`)
       .then((res) => {
         dispatch({
           type: GET_ERRORS,
@@ -72,7 +68,7 @@ function Post({ postt, name, pic }) {
 
   const updatePosts = async (postid) => {
     await axios
-      .get(`https://backend-yws9.onrender.com/api/posts/${postid}`)
+      .get(`http://localhost:5000/api/posts/${postid}`)
       .then((result) => {
         result.data.comments.sort(GetSortOrder("commentDate"));
         setPost(result.data);
@@ -88,10 +84,7 @@ function Post({ postt, name, pic }) {
       id: auth.user.id,
     };
     axios
-      .put(
-        `https://backend-yws9.onrender.com/api/posts/${postid}/like`,
-        userData
-      )
+      .put(`http://localhost:5000/api/posts/${postid}/like`, userData)
       .then((result) => {
         updatePosts(postid);
       })
@@ -107,10 +100,7 @@ function Post({ postt, name, pic }) {
       comment: message,
     };
     axios
-      .put(
-        `https://backend-yws9.onrender.com/api/posts/${postid}/comment`,
-        userData
-      )
+      .put(`http://localhost:5000/api/posts/${postid}/comment`, userData)
       .then((result) => {
         setMessage("");
         setNames([]);

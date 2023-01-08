@@ -7,7 +7,7 @@ function Events() {
   const [events, setEvents] = useState([]);
   useEffect(() => {
     axios
-      .get("https://backend-yws9.onrender.com/api/events/getevents")
+      .get("http://localhost:5000/api/events/getevents")
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
         setEvents(result.data);

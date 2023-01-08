@@ -24,15 +24,12 @@ function GetMembersmsg({ newConv, setNewConv, setConvId, convId }) {
 
     axios
       .get(
-        `https://backend-yws9.onrender.com/api/conversations/find/${fid}/${auth.user.id}`
+        `http://localhost:5000/api/conversations/find/${fid}/${auth.user.id}`
       )
       .then((result) => {
         if (result.data === null) {
           axios
-            .post(
-              "https://backend-yws9.onrender.com/api/conversations/",
-              newConvData
-            )
+            .post("http://localhost:5000/api/conversations/", newConvData)
             .then((result) => {
               setNewConv(result.data);
               setConvId(result.data._id);
@@ -51,7 +48,7 @@ function GetMembersmsg({ newConv, setNewConv, setConvId, convId }) {
 
   useEffect(() => {
     axios
-      .get("https://backend-yws9.onrender.com/api/users/getUsers")
+      .get("http://localhost:5000/api/users/getUsers")
       .then((result) => {
         setUsers(result.data);
       })

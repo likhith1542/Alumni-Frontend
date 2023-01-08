@@ -16,9 +16,7 @@ function Dashboard() {
 
   const getProfileDate = async () => {
     await axios
-      .get(
-        `https://backend-yws9.onrender.com/api/users/getuser/${auth.user.id}`
-      )
+      .get(`http://localhost:5000/api/users/getuser/${auth.user.id}`)
       .then(function (response) {
         setPdata(response.data);
       })

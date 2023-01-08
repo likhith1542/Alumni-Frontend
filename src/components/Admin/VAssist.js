@@ -19,9 +19,7 @@ function VAssist() {
     e.preventDefault();
     setDeletedId([...deletedId, cassist]);
     axios
-      .delete(
-        `https://backend-yws9.onrender.com/api/forms/deleterequest/${cassist}`
-      )
+      .delete(`http://localhost:5000/api/forms/deleterequest/${cassist}`)
       .then((res) => {
         setDeleted(true);
       })
@@ -32,7 +30,7 @@ function VAssist() {
 
   useEffect(() => {
     axios
-      .get("https://backend-yws9.onrender.com/api/forms/getForms")
+      .get("http://localhost:5000/api/forms/getForms")
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
         setAssists(result.data);
@@ -62,15 +60,12 @@ function VAssist() {
 
     axios
       .get(
-        `https://backend-yws9.onrender.com/api/conversations/find/${fid}/${auth.user.id}`
+        `http://localhost:5000/api/conversations/find/${fid}/${auth.user.id}`
       )
       .then((result) => {
         if (result.data === null) {
           axios
-            .post(
-              "https://backend-yws9.onrender.com/api/conversations/",
-              newConvData
-            )
+            .post("http://localhost:5000/api/conversations/", newConvData)
             .then((result) => {
               history.push(`/chat/${result.data._id}`);
             })

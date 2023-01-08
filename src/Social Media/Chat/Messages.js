@@ -28,9 +28,7 @@ function Messages({ pic, convId, name }) {
 
   const getPPic = () => {
     axios
-      .get(
-        `https://backend-yws9.onrender.com/api/users/getuseravatar/${user.id}`
-      )
+      .get(`http://localhost:5000/api/users/getuseravatar/${user.id}`)
       .then((result) => {
         setUserPic(result.data);
       })
@@ -41,7 +39,7 @@ function Messages({ pic, convId, name }) {
 
   const updateMessages = () => {
     axios
-      .get(`https://backend-yws9.onrender.com/api/messages/${convId}`)
+      .get(`http://localhost:5000/api/messages/${convId}`)
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
         setMessages(result.data);
@@ -72,7 +70,7 @@ function Messages({ pic, convId, name }) {
     socketsendMessage(newMessage);
 
     axios
-      .post("https://backend-yws9.onrender.com/api/messages/", newMessage)
+      .post("http://localhost:5000/api/messages/", newMessage)
       .then((result) => {
         updateMessages();
         setMessage("");

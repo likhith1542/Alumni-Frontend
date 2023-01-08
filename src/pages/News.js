@@ -17,7 +17,7 @@ function News() {
     e.preventDefault();
     setDeletedId([...deletedId, cnews]);
     axios
-      .delete(`https://backend-yws9.onrender.com/api/news/deleteNews/${cnews}`)
+      .delete(`http://localhost:5000/api/news/deleteNews/${cnews}`)
       .then((res) => {
         setDeleted(true);
       })
@@ -28,7 +28,7 @@ function News() {
 
   useEffect(() => {
     axios
-      .get("https://backend-yws9.onrender.com/api/news/getnews")
+      .get("http://localhost:5000/api/news/getnews")
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
         setNews(result.data.slice(0, 5));

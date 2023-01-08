@@ -11,7 +11,7 @@ function FetchHook(page, postChanged) {
       await setLoading(true);
       await setError(false);
       const res = await axios.get(
-        `https://backend-yws9.onrender.com/api/posts/getsomePosts/${page}`
+        `http://localhost:5000/api/posts/getsomePosts/${page}`
       );
       await setList((prev) => [...new Set([...prev, ...res.data])]);
       setLoading(false);

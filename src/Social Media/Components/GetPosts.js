@@ -34,9 +34,7 @@ function GetPosts({ postChanged, setPostChanged }) {
     const promises = [];
     list.forEach((post) => {
       promises.push(
-        axios.get(
-          `https://backend-yws9.onrender.com/api/users/getUser/${post.id}`
-        )
+        axios.get(`http://localhost:5000/api/users/getUser/${post.id}`)
       );
     });
 

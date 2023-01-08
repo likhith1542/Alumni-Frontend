@@ -25,7 +25,7 @@ function VProfile() {
 
   const getProfileDate = async () => {
     await axios
-      .get(`https://backend-yws9.onrender.com/api/users/getuser/${userid}`)
+      .get(`http://localhost:5000/api/users/getuser/${userid}`)
       .then(function (response) {
         setPdata(response.data);
       })
@@ -36,7 +36,7 @@ function VProfile() {
 
   const getProfilePosts = async () => {
     await axios
-      .get(`https://backend-yws9.onrender.com/api/posts/getPosts/${userid}`)
+      .get(`http://localhost:5000/api/posts/getPosts/${userid}`)
       .then(function (response) {
         var data = response.data;
 
@@ -51,7 +51,7 @@ function VProfile() {
 
   const getProfileJobs = async () => {
     await axios
-      .get(`https://backend-yws9.onrender.com/api/jobs/getjobs/${userid}`)
+      .get(`http://localhost:5000/api/jobs/getjobs/${userid}`)
       .then(function (response) {
         var data = response.data;
 
@@ -92,15 +92,12 @@ function VProfile() {
 
     axios
       .get(
-        `https://backend-yws9.onrender.com/api/conversations/find/${fid}/${auth.user.id}`
+        `http://localhost:5000/api/conversations/find/${fid}/${auth.user.id}`
       )
       .then((result) => {
         if (result.data === null) {
           axios
-            .post(
-              "https://backend-yws9.onrender.com/api/conversations/",
-              newConvData
-            )
+            .post("http://localhost:5000/api/conversations/", newConvData)
             .then((result) => {
               history.push(`/chat/${result._id}`);
             })

@@ -31,7 +31,7 @@ function Profile() {
     e.preventDefault();
     setDeletedId([...deletedId, cid]);
     axios
-      .delete(`https://backend-yws9.onrender.com/api/jobs/deleteJob/${cid}`)
+      .delete(`http://localhost:5000/api/jobs/deleteJob/${cid}`)
       .then((res) => {})
       .catch((err) => {
         console.log(err);
@@ -46,9 +46,7 @@ function Profile() {
 
   const getProfileDate = async () => {
     await axios
-      .get(
-        `https://backend-yws9.onrender.com/api/users/getuser/${auth.user.id}`
-      )
+      .get(`http://localhost:5000/api/users/getuser/${auth.user.id}`)
       .then(function (response) {
         setPdata(response.data);
         setDesignation(response.data.designation);
@@ -64,9 +62,7 @@ function Profile() {
 
   const getProfilePosts = async () => {
     await axios
-      .get(
-        `https://backend-yws9.onrender.com/api/posts/getPosts/${auth.user.id}`
-      )
+      .get(`http://localhost:5000/api/posts/getPosts/${auth.user.id}`)
       .then(function (response) {
         var data = response.data;
 
@@ -81,7 +77,7 @@ function Profile() {
 
   const getProfileJobs = async () => {
     await axios
-      .get(`https://backend-yws9.onrender.com/api/jobs/getjobs/${auth.user.id}`)
+      .get(`http://localhost:5000/api/jobs/getjobs/${auth.user.id}`)
       .then(function (response) {
         var data = response.data;
 
@@ -126,7 +122,7 @@ function Profile() {
 
     axios
       .post(
-        `https://backend-yws9.onrender.com/api/users/${auth.user.id}/edit`,
+        `http://localhost:5000/api/users/${auth.user.id}/edit`,
         profileUpdate
       )
       .then((res) => {
