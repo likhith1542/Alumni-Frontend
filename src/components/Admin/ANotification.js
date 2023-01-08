@@ -26,7 +26,10 @@ function ANotification() {
     var formData = { id: id, message: message };
 
     axios
-      .post("http://localhost:5000/api/notifications/addNotification", formData)
+      .post(
+        "https://backend-yws9.onrender.com/api/notifications/addNotification",
+        formData
+      )
       .then((res) => {
         dispatch({
           type: GET_ERRORS,

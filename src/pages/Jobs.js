@@ -22,7 +22,7 @@ function Jobs() {
     e.preventDefault();
     setDeletedId([...deletedId, cid]);
     axios
-      .delete(`http://localhost:5000/api/jobs/deleteJob/${cid}`)
+      .delete(`https://backend-yws9.onrender.com/api/jobs/deleteJob/${cid}`)
       .then((res) => {})
       .catch((err) => {
         console.log(err);
@@ -31,7 +31,7 @@ function Jobs() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/jobs/getjobs")
+      .get("https://backend-yws9.onrender.com/api/jobs/getjobs")
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
         setJobs(result.data);
@@ -61,12 +61,15 @@ function Jobs() {
 
     axios
       .get(
-        `http://localhost:5000/api/conversations/find/${fid}/${auth.user.id}`
+        `https://backend-yws9.onrender.com/api/conversations/find/${fid}/${auth.user.id}`
       )
       .then((result) => {
         if (result.data === null) {
           axios
-            .post("http://localhost:5000/api/conversations/", newConvData)
+            .post(
+              "https://backend-yws9.onrender.com/api/conversations/",
+              newConvData
+            )
             .then((result) => {
               history.push(`/chat/${result._id}`);
             })

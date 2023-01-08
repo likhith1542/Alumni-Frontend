@@ -34,7 +34,7 @@ function AddJob({ setOpenModal }) {
     };
 
     axios
-      .post("http://localhost:5000/api/jobs/addjob", newPost)
+      .post("https://backend-yws9.onrender.com/api/jobs/addjob", newPost)
       .then((res) => {
         dispatch({
           type: GET_ERRORS,

@@ -9,7 +9,7 @@ function NewsRoom() {
   const [news, setNews] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/news/getnews")
+      .get("https://backend-yws9.onrender.com/api/news/getnews")
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
         setNews(result.data.slice(0, 5));

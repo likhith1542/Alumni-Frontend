@@ -21,12 +21,15 @@ function Birthday() {
 
     axios
       .get(
-        `http://localhost:5000/api/conversations/find/${fid}/${auth.user.id}`
+        `https://backend-yws9.onrender.com/api/conversations/find/${fid}/${auth.user.id}`
       )
       .then((result) => {
         if (result.data === null) {
           axios
-            .post("http://localhost:5000/api/conversations/", newConvData)
+            .post(
+              "https://backend-yws9.onrender.com/api/conversations/",
+              newConvData
+            )
             .then((res) => {
               history.push(`/chat/${res.data._id}`);
             })
@@ -55,7 +58,7 @@ function Birthday() {
     };
 
     axios
-      .post("http://localhost:5000/api/users/getBdays", newPost)
+      .post("https://backend-yws9.onrender.com/api/users/getBdays", newPost)
       .then((result) => {
         setBdays(result.data);
       })

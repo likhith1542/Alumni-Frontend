@@ -41,7 +41,7 @@ function AEvents() {
     newPost.append("file", photo);
 
     axios
-      .post("http://localhost:5000/api/events/addEvent", newPost)
+      .post("https://backend-yws9.onrender.com/api/events/addEvent", newPost)
       .then((res) => {
         dispatch({
           type: GET_ERRORS,

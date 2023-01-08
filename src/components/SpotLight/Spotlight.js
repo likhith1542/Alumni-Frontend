@@ -14,7 +14,7 @@ function Spotlight() {
     setDeletedId([...deletedId, nid]);
     axios
       .delete(
-        `http://localhost:5000/api/notifications/deleteNotification/${nid}`
+        `https://backend-yws9.onrender.com/api/notifications/deleteNotification/${nid}`
       )
       .then((res) => {})
       .catch((err) => {
@@ -24,7 +24,9 @@ function Spotlight() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/notifications/getNotifications")
+      .get(
+        "https://backend-yws9.onrender.com/api/notifications/getNotifications"
+      )
       .then((result) => {
         setNotifications(result.data);
       })

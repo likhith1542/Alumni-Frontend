@@ -26,7 +26,9 @@ function Gallery() {
     e.preventDefault();
     setDeletedId([...deletedId, citem]);
     axios
-      .delete(`http://localhost:5000/api/galleries/deletegallery/${citem}`)
+      .delete(
+        `https://backend-yws9.onrender.com/api/galleries/deletegallery/${citem}`
+      )
       .then((res) => {})
       .catch((err) => {
         console.log(err);
@@ -35,7 +37,7 @@ function Gallery() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/galleries/getgallery")
+      .get("https://backend-yws9.onrender.com/api/galleries/getgallery")
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
         setGalleryImages(result.data);

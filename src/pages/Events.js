@@ -17,7 +17,7 @@ function Events() {
     e.preventDefault();
     setDeletedId([...deletedId, eid]);
     axios
-      .delete(`http://localhost:5000/api/events/deleteEvent/${eid}`)
+      .delete(`https://backend-yws9.onrender.com/api/events/deleteEvent/${eid}`)
       .then((res) => {})
       .catch((err) => {
         console.log(err);
@@ -26,7 +26,7 @@ function Events() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/events/getevents")
+      .get("https://backend-yws9.onrender.com/api/events/getevents")
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
         setJobs(result.data);

@@ -7,7 +7,7 @@ function Jobs() {
   const [jobs, setJobs] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/jobs/getjobs")
+      .get("https://backend-yws9.onrender.com/api/jobs/getjobs")
       .then((result) => {
         result.data.sort(GetSortOrder("postedOn"));
         setJobs(result.data.slice(0, 5));

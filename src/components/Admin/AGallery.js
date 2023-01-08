@@ -35,7 +35,10 @@ function AGallery() {
     newPost.append("file", photo);
 
     axios
-      .post("http://localhost:5000/api/galleries/addgallery", newPost)
+      .post(
+        "https://backend-yws9.onrender.com/api/galleries/addgallery",
+        newPost
+      )
       .then((res) => {
         dispatch({
           type: GET_ERRORS,

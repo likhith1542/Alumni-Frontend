@@ -6,7 +6,7 @@ import { history } from "../history";
 // Register User
 export const registerUser = (userData) => (dispatch) => {
   axios
-    .post("http://localhost:5000/api/users/register", userData)
+    .post("https://backend-yws9.onrender.com/api/users/register", userData)
     .then((res) => {
       dispatch({
         type: GET_ERRORS,
@@ -26,7 +26,7 @@ export const registerUser = (userData) => (dispatch) => {
 // Login - get user token
 export const loginUser = (userData) => (dispatch) => {
   axios
-    .post("http://localhost:5000/api/users/login", userData)
+    .post("https://backend-yws9.onrender.com/api/users/login", userData)
     .then((res) => {
       // Save to localStorage
       // Set token to localStorage

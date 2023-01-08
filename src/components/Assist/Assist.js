@@ -44,7 +44,7 @@ function Assist() {
     };
 
     axios
-      .post("http://localhost:5000/api/forms/addForm", newForm)
+      .post("https://backend-yws9.onrender.com/api/forms/addForm", newForm)
       .then((res) => {
         dispatch({
           type: GET_ERRORS,
